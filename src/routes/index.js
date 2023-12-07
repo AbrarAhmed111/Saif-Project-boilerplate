@@ -1,17 +1,16 @@
-import AuthView from '../views/auth/AuthView';
-import MainView from '../views/MainView';
-
+import Login from "../views/auth/Login";
+import Dashboard from "../views/Dashboard";
 
 let routes = [
-	{
-		path: '/auth',
-		component: AuthView,
-		layout: 'auth',
-	},
-	{
-		path: '/',
-		component: MainView,
-		layout: 'main',
-	},
+    {
+        path: "/",
+        component: Login,
+        layout: "auth",
+    },
+    {
+        path: "/dashboard",
+        component: Dashboard,
+        layout: "main",
+    },
 ];
 export default routes;
