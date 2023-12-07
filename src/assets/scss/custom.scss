@@ -1,0 +1,34 @@
+$theme-colors: (
+    "chatBot-theme": #071449,
+    "navbar-color": #0f265a,
+);
+@import "node_modules/bootstrap/scss/bootstrap";
+body {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+::-webkit-scrollbar {
+    width: 0.111rem;
+    height: 0rem;
+}
+::-webkit-scrollbar-track {
+    background: theme-color("site-secondary1");
+}
+::-webkit-scrollbar-thumb {
+    background-color: #cecece; /* color of the scroll thumb */
+    border-radius: 1.25rem; /* roundness of the scroll thumb */
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+$weights: 100 200 300 400 500 500 600 700 800;
+@each $weight in $weights {
+    .fw--#{$weight} {
+        font-weight: $weight;
+    }
+}
+@for $size from 9 through 96 {
+    .fs--#{$size} {
+        font-size: $size/16 + rem;
+    }
+}
