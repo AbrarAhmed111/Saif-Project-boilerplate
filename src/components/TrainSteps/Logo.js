@@ -9,12 +9,12 @@ export default function Logo({
     setCurrentStep,
 }) {
     const handleLogoNext = () => {
-        if (chatbotDetail?.logo.length > 0) {
+        // if (chatbotDetail?.logo.length > 0) {
             let step = currentStep + 1;
             setCurrentStep(step);
-        } else {
-            alert("Logo is mendatory!");
-        }
+        // } else {
+        //     alert("Logo is mendatory!");
+        // }
     };
     const handleBack = () => {
         let step = currentStep - 1;

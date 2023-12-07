@@ -11,9 +11,9 @@ export default function Email({
 }) {
     const dispatch = useDispatch();
     const history = useHistory();
-    const { user_id } = useSelector((state) => state.authUser);
-    const { loading } = useSelector((state) => state.train);
-    const { singleChatbot } = useSelector((state) => state.chatbot);
+    // const { user_id } = useSelector((state) => state.authUser);
+    // const { loading } = useSelector((state) => state.train);
+    // const { singleChatbot } = useSelector((state) => state.chatbot);
     const date = new Date();
     const day = date.getDate().toString().padStart(2, "0");
     const month = (date.getMonth() + 1).toString().padStart(2, "0"); // Note: January is 0, so we add 1 to get the correct month.
@@ -24,75 +24,75 @@ export default function Email({
         const isValidEmail = /^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/.test(
             chatbotDetail?.email
         );
-        if (Object.keys(singleChatbot).length == 0) {
-            if (isValidEmail) {
-                const parts = chatbotDetail?.username?.split("/");
-                let stepsDetail = {
-                    ...chatbotDetail,
-                    username: parts[1],
-                    date_created: formattedDate,
-                };
-                // dispatch(
-                //     createChatBot(stepsDetail, user_id, () => {
-                //         let step = currentStep + 1;
-                //         setCurrentStep(step);
-                //         dispatch(clearAction());
-                //         setChatbotDetail({
-                //             username: "AIBot.com/",
-                //             chatBotFor: { title: "", detail: [] },
-                //             chatBotName: "",
-                //             welcomeMessage: "",
-                //             suggestionQuestions: [],
-                //             logo: [],
-                //             background: {
-                //                 chatbotName: "#181818",
-                //                 userBackground: "#181818",
-                //                 botBackground: "#181818",
-                //             },
-                //             additionalRule:
-                //                 "Maintain A Humorous Tone In Responses.",
-                //             email: "",
-                //         });
-                //     })
-                // );
-            } else {
-                alert("Please enter a valid email address.");
-            }
-        } else {
-            if (isValidEmail) {
-                const parts = chatbotDetail?.username?.split("/");
-                let stepsDetail = {
-                    ...chatbotDetail,
-                    username: parts[1],
-                    date_created: formattedDate,
-                };
-                // dispatch(
-                //     updateChatBot(stepsDetail, user_id,singleChatbot?.id, () => {
-                //         let step = currentStep + 1;
-                //         setCurrentStep(step);
-                //         dispatch(clearAction());
-                //         setChatbotDetail({
-                //             username: "AIBot.com/",
-                //             chatBotFor: { title: "", detail: [] },
-                //             chatBotName: "",
-                //             welcomeMessage: "",
-                //             suggestionQuestions: [],
-                //             logo: [],
-                //             background: {
-                //                 chatbotName: "#181818",
-                //                 userBackground: "#181818",
-                //                 botBackground: "#181818",
-                //             },
-                //             additionalRule:
-                //                 "Maintain A Humorous Tone In Responses.",
-                //             email: "",
-                //         });
-                //     })
-                // );
-            } else {
-                alert("Please enter a valid email address.");
-            }
-        }
+        // if (Object.keys(singleChatbot).length == 0) {
+        //     if (isValidEmail) {
+        //         const parts = chatbotDetail?.username?.split("/");
+        //         let stepsDetail = {
+        //             ...chatbotDetail,
+        //             username: parts[1],
+        //             date_created: formattedDate,
+        //         };
+        //         // dispatch(
+        //         //     createChatBot(stepsDetail, user_id, () => {
+        //         //         let step = currentStep + 1;
+        //         //         setCurrentStep(step);
+        //         //         dispatch(clearAction());
+        //         //         setChatbotDetail({
+        //         //             username: "AIBot.com/",
+        //         //             chatBotFor: { title: "", detail: [] },
+        //         //             chatBotName: "",
+        //         //             welcomeMessage: "",
+        //         //             suggestionQuestions: [],
+        //         //             logo: [],
+        //         //             background: {
+        //         //                 chatbotName: "#181818",
+        //         //                 userBackground: "#181818",
+        //         //                 botBackground: "#181818",
+        //         //             },
+        //         //             additionalRule:
+        //         //                 "Maintain A Humorous Tone In Responses.",
+        //         //             email: "",
+        //         //         });
+        //         //     })
+        //         // );
+        //     } else {
+        //         alert("Please enter a valid email address.");
+        //     }
+        // } else {
+        //     if (isValidEmail) {
+        //         const parts = chatbotDetail?.username?.split("/");
+        //         let stepsDetail = {
+        //             ...chatbotDetail,
+        //             username: parts[1],
+        //             date_created: formattedDate,
+        //         };
+        //         // dispatch(
+        //         //     updateChatBot(stepsDetail, user_id,singleChatbot?.id, () => {
+        //         //         let step = currentStep + 1;
+        //         //         setCurrentStep(step);
+        //         //         dispatch(clearAction());
+        //         //         setChatbotDetail({
+        //         //             username: "AIBot.com/",
+        //         //             chatBotFor: { title: "", detail: [] },
+        //         //             chatBotName: "",
+        //         //             welcomeMessage: "",
+        //         //             suggestionQuestions: [],
+        //         //             logo: [],
+        //         //             background: {
+        //         //                 chatbotName: "#181818",
+        //         //                 userBackground: "#181818",
+        //         //                 botBackground: "#181818",
+        //         //             },
+        //         //             additionalRule:
+        //         //                 "Maintain A Humorous Tone In Responses.",
+        //         //             email: "",
+        //         //         });
+        //         //     })
+        //         // );
+        //     } else {
+        //         alert("Please enter a valid email address.");
+        //     }
+        // }
     };
 
     const handleBack = () => {
@@ -134,13 +134,13 @@ export default function Email({
                                 onClick={() => {
                                     handleEmailNext();
                                 }}
-                                disabled={loading}
+                                // disabled={loading}
                             >
-                                {loading ? (
+                                {/* {loading ? (
                                     <Spinner className="text-light" size="md" />
                                 ) : (
                                     "Next"
-                                )}
+                                )} */}Next
                             </Button>
                         </div>
                     </div>
