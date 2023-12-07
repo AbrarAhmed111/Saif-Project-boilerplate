@@ -32,3 +32,255 @@ $weights: 100 200 300 400 500 500 600 700 800;
         font-size: $size/16 + rem;
     }
 }
+.main-layout {
+    min-height: 100vh;
+}
+
+
+.elevate {
+    border-radius: 10px 0 0 10px;
+}
+.elevate-left {
+    margin-top: 70%;
+    margin-left: 20%;
+    @media screen and (max-width: 991px) {
+        margin-top: 10%;
+        margin-left: 20%;
+    }
+    @media screen and (max-width: 409px) {
+        margin-top: 8% !important;
+        margin-left: 0% !important;
+    }
+}
+.discover-left {
+    border-radius: 10px;
+}
+.discover-right {
+    margin-top: 20%;
+    @media screen and (max-width: 767px) {
+        margin-top: 5%;
+    }
+}
+.advantage-section {
+    background-image: url("../img/advantageRectangle.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+.chat-inner {
+    background-image: url("../img/chatBotbg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.chatBot-left {
+    margin-top: 50px;
+    @media screen and (max-width: 409px) {
+        padding: 0px !important;
+    }
+}
+.chatBot-row {
+    @media screen and (max-width: 2826px) {
+        margin-top: 8% !important;
+    }
+}
+.chatBot-row {
+    @media screen and (max-width: 1525px) {
+        margin-top: 7% !important;
+    }
+}
+.chatBot-row {
+    @media screen and (max-width: 1200px) {
+        margin-top: 5% !important;
+    }
+}
+.chatBot-row {
+    @media screen and (max-width: 409px) {
+        padding: 0px !important;
+    }
+}
+
+
+.right-section {
+    background-color: #071449;
+    height: 430px !important;
+    border-radius: 10px !important;
+}
+.right-section-chat {
+    background-color: #071449;
+    height: 470px !important;
+    border-radius: 10px !important;
+    @media screen and (max-width: 1030px) {
+        height: 510px !important;
+    }
+    @media screen and (max-width: 768px) {
+        height: 100% !important;
+    }
+    // @media screen and (max-width: 536px) {
+    //     height: 640px !important;
+    // }
+    // @media screen and (max-width: 520px) {
+    //     height: 650px !important;
+    // }
+    // @media screen and (max-width: 472px) {
+    //     height: 750px !important;
+    // }
+}
+.font-small {
+    @media screen and (max-width: 431px) {
+        font-size: 15px;
+    }
+    @media screen and (max-width: 403px) {
+        font-size: 10px;
+    }
+    @media screen and (max-width: 326px) {
+        font-size: 10px;
+    }
+}
+.font-heading {
+    @media screen and (max-width: 431px) {
+        font-size: 17px;
+    }
+    @media screen and (max-width: 403px) {
+        font-size: 13px;
+    }
+    @media screen and (max-width: 326px) {
+        font-size: 12px;
+    }
+}
+//username
+.username-input {
+    background-color: #071449 !important;
+    border-bottom: 1px solid grey !important;
+}
+
+.chatbot-screen {
+    border: 10px solid black;
+    border-radius: 25px !important;
+    height: 360px !important;
+    width: 62% !important;
+    margin-bottom: 10px !important;
+    @media screen and (max-width: 1030px) {
+        width: 70% !important;
+    }
+    @media screen and (max-width: 991.33px) {
+        width: 35% !important;
+    }
+    @media screen and (max-width: 768px) {
+        width: 40% !important;
+    }
+    @media screen and (max-width: 767px) {
+        width: 47% !important;
+    }
+    @media screen and (max-width: 568px) {
+        width: 50% !important;
+    }
+    @media screen and (max-width: 500px) {
+        width: 55% !important;
+    }
+    @media screen and (max-width: 450px) {
+        width: 65% !important;
+    }
+    @media screen and (max-width: 400px) {
+        width: 75% !important;
+    }
+    @media screen and (max-width: 350px) {
+        width: 85% !important;
+    }
+    @media screen and (max-width: 330px) {
+        width: 90% !important;
+    }
+    position: relative;
+}
+
+.rounded-pill-footer {
+    position: absolute;
+    bottom: 10px; /* Adjust this value for desired spacing from the bottom */
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: grey;
+    padding: 2px;
+    border-radius: 50px;
+}
+
+.rounded-pill-input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    flex-grow: 1;
+    background-color: #ffffff;
+    margin-left: 2px;
+    padding-bottom: 3px !important;
+    padding-top: 0px !important;
+    border-radius: 50px;
+    width: 10% !important;
+    /* Adjust font size as needed */
+    margin-right: 2px; /* Adjust margin as needed */
+}
+.rounded-pill-input::placeholder {
+    font-size: 9px !important;
+    text-align: center;
+    color: black;
+}
+.rounded-pill-button {
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    font-size: 9px !important;
+    padding: 5px 10px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.chatbot-usage-button {
+    background-color: #071449;
+}
+.chatbot-usage-button:hover {
+    background-color: #f2b456 !important;
+}
+.chatbot-usage-button:active {
+    background-color: #f2b456 !important;
+}
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Right-align user messages */
+    max-height: 40vh;
+    overflow: auto;
+}
+
+/* Style for user messages */
+.user-message {
+    color: black;
+    padding: 8px;
+    border-radius: 8px;
+    margin: 8px;
+    text-align: right;
+    font-size: 8px; /* Adjust text size as needed */
+}
+
+/* Style for bot messages */
+.bot-message {
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    margin: 8px;
+    text-align: left;
+    font-size: 8px; /* Adjust text size as needed */
+}
+input[type="color"] {
+    border-radius: 20px; /* Adjust the value as needed */
+    /* Add any other necessary styles */
+}
+.cursor {
+    cursor: pointer;
+}
+.successfull {
+    height: 450px !important;
+    margin-bottom: 50px !important;
+}
+
